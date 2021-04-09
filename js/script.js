@@ -51,34 +51,3 @@ if(computerMove == 'kamień' && playerMove == 'papier'){
 } else {
 	printMessage('Błąd! Wybierz liczbę od 1 do 3 odpowiadającą zagraniom!');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
