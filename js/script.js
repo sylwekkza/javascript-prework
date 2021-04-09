@@ -1,7 +1,33 @@
-let computerMove= 'kamień ';
+let randomNumber = Math.floor(Math.random() * 3 + 1);
 
-let playerMove= 'papier';
+console.log('Komputer wybrał ' + randomNumber);
 
-printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to papier, to wygrywasz!');
+let computerMove = 'nieznany ruch';
 
-printMessage('Zagrałeś ' + playerMove + '! Wygrywasz!');
+if(randomNumber == 1){
+	computerMove = 'kamień';
+} if(randomNumber == 2){
+	computerMove = 'papier';
+} if(randomNumber == 3){
+	computerMove = 'nożyce';
+}
+
+printMessage('Mój ruch to: ' + computerMove);
+
+let playerInput = prompt('Wybierz swój ruch! 1: kamień 2: papier 3: nożyce');
+
+console.log('Gracz wybrał ' + playerInput);
+
+let playerMove = 'nieznany ruch';
+
+if(playerInput == 1){
+	playerMove = 'kamień';
+}
+if(playerInput == 2){
+	playerMove = 'papier';
+}
+if(playerInput == 3){
+	playerMove = 'nożyce';
+}
+
+printMessage('Twój ruch to: ' + playerMove);
