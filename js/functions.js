@@ -13,16 +13,19 @@ function clearMessages() {
 }
 
 function getMoveName(argMoveId) {
-	if (argMoveId === 1 || argMoveId === '1')
+	
+	let moveId = Number(argMoveId);
+
+	if (moveId === 1)
 		return rock;
 
-	if (argMoveId === 2 || argMoveId === '2')
+	if (moveId === 2)
 		return paper;
 
-	if (argMoveId === 3 || argMoveId === '3')
+	if (moveId === 3)
 		return scissors;
 
-		return 'nieznany ruch';
+	return 'nieznany ruch';
 }
 
 function displayResult(computerMove, playerMove) {
@@ -32,7 +35,7 @@ function displayResult(computerMove, playerMove) {
 	(computerMove === rock && playerMove === paper ||
 	computerMove === paper && playerMove === scissors ||
 	computerMove === scissors && playerMove === rock) {
-		printMessage ('Wygrywasz!');
+		printMessage('Wygrywasz!');
 	} 
 	
 	else if 
@@ -46,11 +49,11 @@ function displayResult(computerMove, playerMove) {
 	(computerMove === rock && playerMove === rock ||
 	computerMove === paper && playerMove === paper ||
 	computerMove === scissors && playerMove === scissors) {
-		printMessage ('Remis!');
+		printMessage('Remis!');
 	} 
 
 	else {
-		printMessage ('Błąd! Wybierz liczbę od 1 do 3 odpowiadającą zagraniom!');
+		printMessage('Błąd! Wybierz liczbę od 1 do 3 odpowiadającą zagraniom!');
 	}
 		
 }
