@@ -1,3 +1,7 @@
+let rock = 'kamień';
+let paper = 'papier';
+let scissors = 'nożyce';
+
 function printMessage(msg){
 	let div = document.createElement('div');
 	div.innerHTML = msg;
@@ -9,41 +13,34 @@ function clearMessages(){
 }
 
 function getMoveName(argMoveId){
-	if(argMoveId == 1)
-	
-		return 'kamień';
+	if (argMoveId == 1)
+		return rock;
 
-	else if(argMoveId == 2)
+	if (argMoveId == 2)
+		return paper;
 
-		return 'papier';
-
-	else if(argMoveId == 3)
-
-		return 'nożyce';
+	if (argMoveId == 3)
+		return scissors;
 
 		return 'nieznany ruch';
 }
 
-let k = 'kamień'
-let p = 'papier'
-let n = 'nożyce'
-
 function displayResult(computerMove, playerMove){
 	printMessage('Zagrałem ' + computerMove + ' , a Ty ' + playerMove);
 
-	if (computerMove == k && playerMove == p ||
-		computerMove == p && playerMove == n ||
-		computerMove == n && playerMove == k){
+	if (computerMove == rock && playerMove == paper ||
+		computerMove == paper && playerMove == scissors ||
+		computerMove == scissors && playerMove == rock){
 			printMessage('Wygrywasz!');
 
-	} else if (computerMove == k && playerMove == n ||
-			   computerMove == p && playerMove == k || 
-			   computerMove == n && playerMove == p){
+	} else if (computerMove == rock && playerMove == scissors ||
+			   computerMove == paper && playerMove == rock || 
+			   computerMove == scissors && playerMove == paper){
 					printMessage('Przegrałeś!');
 
-	} else if (computerMove == k && playerMove == k ||
-			   computerMove == p && playerMove == p ||
-	           computerMove == n && playerMove == n){
+	} else if (computerMove == rock && playerMove == rock ||
+			   computerMove == paper && playerMove == paper ||
+	           computerMove == scissors && playerMove == scissors){
 				   	printMessage('Remis!');
 
 	} else {
