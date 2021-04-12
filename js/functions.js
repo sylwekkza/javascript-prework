@@ -10,33 +10,42 @@ function clearMessages(){
 
 function getMoveName(argMoveId){
 	if(argMoveId == 1)
-	return 'kamień';
+	
+		return 'kamień';
 
 	else if(argMoveId == 2)
-	return 'papier';
+
+		return 'papier';
 
 	else if(argMoveId == 3)
-	return 'nożyce';
 
-	printMessage('');
-	return 'nieznany ruch';
+		return 'nożyce';
+
+		return 'nieznany ruch';
 }
+
+let k = 'kamień'
+let p = 'papier'
+let n = 'nożyce'
 
 function displayResult(computerMove, playerMove){
 	printMessage('Zagrałem ' + computerMove + ' , a Ty ' + playerMove);
 
-	if (computerMove == 'kamień' && playerMove == 'papier' ||
-		computerMove == 'papier' && playerMove == 'nożyce' ||
-		computerMove == 'nożyce' && playerMove == 'kamień'){
+	if (computerMove == k && playerMove == p ||
+		computerMove == p && playerMove == n ||
+		computerMove == n && playerMove == k){
 			printMessage('Wygrywasz!');
-	} else if (computerMove == 'kamień' && playerMove == 'nożyce' ||
-			   computerMove == 'papier' && playerMove == 'kamień' || 
-			   computerMove == 'nożyce' && playerMove == 'papier'){
+
+	} else if (computerMove == k && playerMove == n ||
+			   computerMove == p && playerMove == k || 
+			   computerMove == n && playerMove == p){
 					printMessage('Przegrałeś!');
-	} else if (computerMove == 'kamień' && playerMove == 'kamień' ||
-			   computerMove == 'papier' && playerMove == 'papier' ||
-	           computerMove == 'nożyce' && playerMove == 'nożyce'){
+
+	} else if (computerMove == k && playerMove == k ||
+			   computerMove == p && playerMove == p ||
+	           computerMove == n && playerMove == n){
 				   	printMessage('Remis!');
+
 	} else {
 		printMessage('Błąd! Wybierz liczbę od 1 do 3 odpowiadającą zagraniom!');
 	}
