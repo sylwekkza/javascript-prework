@@ -1,17 +1,4 @@
-function playGame(playerInput){
-
-	clearMessages()
-
-	let randomNumber = Math.floor(Math.random() * 3 + 1);
-
-	let computerMove = getMoveName(randomNumber);
-
-	let playerMove = getMoveName(playerInput);
-
-	let result = displayResult(computerMove, playerMove);
-
-
-}document.getElementById('play-rock').addEventListener('click', function(){
+document.getElementById('play-rock').addEventListener('click', function(){
 	playGame(1);
 });
 

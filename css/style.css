@@ -1,2 +1,48 @@
+@font-face {
+  font-family: "theft";
+  src: url("/fonts/Rebelton Medium.ttf") format("opentype");
+}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
+body {
+  background-image: url(https://szaloneliczby.pl/wp-content/uploads/2015/11/papier-kamien-nozyce.jpg);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  position: absolute;
+  top: 250px;
+}
+
+.button-moves {
+  display: flex;
+  justify-content: center;
+}
+
+.button-moves button {
+  padding: 20px;
+  font-size: 20px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 40%;
+  outline: none;
+}
+
+.instruction {
+  font-family: "theft";
+  text-transform: uppercase;
+  word-spacing: -4px;
+  text-align: center;
+}
+
+.instruction p {
+  font-size: 15px;
+}
+
+.msg {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLG9CQUFvQjtFQUNwQix5REFBMEQ7QUNDOUQ7O0FESUE7RUFDSSxtR0FBbUc7RUFDbkcsYUFBYTtFQUNiLHVCQUF1QjtFQUN2QixhQUFhO0FDRGpCOztBRElBO0VBQ0ksa0JBQWtCO0VBQ2xCLFVBQVU7QUNEZDs7QURJQTtFQUNJLGFBQWE7RUFDYix1QkFBdUI7QUNEM0I7O0FEREE7RUFLSSxhQUFhO0VBQ2IsZUFBZTtFQUNmLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIsa0JBQWtCO0VBQ2xCLGFBQWE7QUNBakI7O0FES0E7RUFDSSxvQkE5QlU7RUErQlYseUJBQXlCO0VBQ3pCLGtCQUFrQjtFQUNsQixrQkFBa0I7QUNGdEI7O0FERkE7RUFPUSxlQUFlO0FDRHZCOztBREtBO0VBQ0ksZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixlQUFlO0FDRm5CIiwiZmlsZSI6InN0eWxlLmNzcyJ9 */
