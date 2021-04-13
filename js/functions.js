@@ -30,7 +30,7 @@ function getMoveName(argMoveId) {
 }
 
 function displayResult(computerMove, playerMove) {
-	printMessage('Zagrałem ' + computerMove + ' , a Ty ' + playerMove);
+	printMessage('Zagrałeś ' + playerMove + ', a Komputer wylosował ' + computerMove + '!');
 
 	if 
 	(computerMove === rock && playerMove === paper ||
@@ -71,3 +71,5 @@ function playGame(playerInput){
 
 	let result = displayResult(computerMove, playerMove);
 } 
+
+
