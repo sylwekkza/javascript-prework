@@ -1,4 +1,5 @@
-"strict mode" {
+"use strict";
+{
 	const rock = 'kamień';
 	const paper = 'papier';
 	const scissors = 'nożyce';
@@ -54,12 +55,12 @@
 	const clearMessages = function() {
 		messagesDiv.innerHTML = '';
 	}
-
-	function playGame(playerInput) {
+	
+	var playGame = function(playerInput) {
 		const randomNumber = Math.floor(Math.random() * 3 + 1);
 		
 		const computerMove = getMoveName(randomNumber);
-		
+			
 		const playerMove = getMoveName(playerInput);
 		
 		clearMessages();
