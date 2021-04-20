@@ -1,24 +1,14 @@
-{ 
-	function printMessage(message) {
-		let div = document.createElement('div');
-		div.innerHTML = message;
-		document.getElementById('messages').appendChild(div);
-	}
-
-	function clearMessages() {
-		document.getElementById('messages').innerHTML = '';
-	}
-
-	{
-		let rock = 'kamień',
+{
+	function playGame(playerInput) {
+	
+		const rock = 'kamień',
 			paper = 'papier',
 			scissors = 'nożyce';
 
-		function getMoveName(argMoveId) {
+		const getMoveName = function (argMoveId) {
+			const moveId = parseInt(argMoveId);
 
-			let moveId = parseInt(argMoveId);
-
-			if (moveId === 12)
+			if (moveId === 1)
 				return rock;
 
 			if (moveId === 2)
@@ -30,7 +20,12 @@
 			return 'nieznany ruch';
 		}
 
-		function displayResult(computerMove, playerMove) {
+		const displayResult = function(computerMove, playerMove) {
+			const printMessage = function(message) {
+				const div = document.createElement('div');
+				div.innerHTML = message;
+				document.getElementById('messages').appendChild(div);
+			}
 			printMessage('Zagrałeś ' + playerMove + ', a Komputer wylosował ' + computerMove + '!');
 
 			if (computerMove === rock && playerMove === paper ||
@@ -38,7 +33,7 @@
 			computerMove === scissors && playerMove === rock) {
 			printMessage('<p class="result result-win">Wygrywasz!</p>');
 			} 
-	
+		
 			else if (computerMove === rock && playerMove === scissors ||
 			computerMove === paper && playerMove === rock || 
 			computerMove === scissors && playerMove === paper) {
@@ -55,17 +50,17 @@
 				printMessage('Błąd! Wybierz liczbę od 1 do 3 odpowiadającą zagraniom!');
 			}	
 		}
-	}
 
-	function playGame(playerInput){
+		const clearMessages = function() {
+			document.getElementById('messages').innerHTML = '';
+		}
+
 		clearMessages();
 
-		let randomNumber = Math.floor(Math.random() * 3 + 1);
-
-		let computerMove = getMoveName(randomNumber);
-
-		let playerMove = getMoveName(playerInput);
+		const randomNumber = Math.floor(Math.random() * 3 + 1),
+			computerMove = getMoveName(randomNumber),
+			playerMove = getMoveName(playerInput);
 
 		displayResult(computerMove, playerMove);
-	} 
+	}
 }
