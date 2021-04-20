@@ -18,7 +18,7 @@
 
 			let moveId = parseInt(argMoveId);
 
-			if (moveId === 1)
+			if (moveId === 12)
 				return rock;
 
 			if (moveId === 2)
