@@ -1,9 +1,9 @@
 {
 	function playGame(playerInput) {
 	
-		const rock = 'kamień',
-			paper = 'papier',
-			scissors = 'nożyce';
+		const rock = 'kamień';
+		const paper = 'papier';
+		const scissors = 'nożyce';
 
 		const getMoveName = function(argMoveId) {
 			const moveId = parseInt(argMoveId);
@@ -20,9 +20,9 @@
 			return 'nieznany ruch';
 		}
 
-		const randomNumber = Math.floor(Math.random() * 3 + 1),
-			computerMove = getMoveName(randomNumber),
-			playerMove = getMoveName(playerInput);
+		const randomNumber = Math.floor(Math.random() * 3 + 1);
+		const computerMove = getMoveName(randomNumber);
+		const playerMove = getMoveName(playerInput);
 
 		const displayResult = function(computerMove, playerMove) {
 			const printMessage = function(message) {
